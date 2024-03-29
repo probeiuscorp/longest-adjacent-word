@@ -20,3 +20,7 @@ main = hspec $ do
             isWordAllAdjacent "qe" `shouldBe` False
         it "somebody" $ do
             isWordAllAdjacent "somebody" `shouldBe` False
+        it "qs" $ do
+            isWordAllAdjacent "qs" `shouldBe` False
+        it "sc" $ do
+            isWordAllAdjacent "sc" `shouldBe` False
