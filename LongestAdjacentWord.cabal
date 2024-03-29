@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           longest-adjacent-word
+name:           LongestAdjacentWord
 version:        0.1.0.0
 description:    Find longest English word whose letters are adjacent on a QWERTY keyboard
 homepage:       https://github.com/probeiuscorp/longest-adjacent-word#readme
@@ -24,9 +24,10 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      LongestAdjacentWord.AdjacentPairs
+      LongestAdjacentWord.AreAdjacent
   other-modules:
-      Paths_longest_adjacent_word
+      Paths_LongestAdjacentWord
   hs-source-dirs:
       src
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
@@ -38,26 +39,30 @@ library
 executable longest-adjacent-word-exe
   main-is: Main.hs
   other-modules:
-      Paths_longest_adjacent_word
+      Paths_LongestAdjacentWord
   hs-source-dirs:
       app
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      LongestAdjacentWord
+    , base >=4.7 && <5
     , containers
-    , longest-adjacent-word
   default-language: Haskell2010
 
 test-suite longest-adjacent-word-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_longest_adjacent_word
+      Paths_LongestAdjacentWord
   hs-source-dirs:
       test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      HUnit
+    , LongestAdjacentWord
+    , QuickCheck
+    , base >=4.7 && <5
     , containers
-    , longest-adjacent-word
+    , hspec
+    , hspec-contrib
   default-language: Haskell2010

@@ -1,4 +1,4 @@
-name:                longest-adjacent-word
+name:                LongestAdjacentWord
 version:             0.1.0.0
 github:              "probeiuscorp/longest-adjacent-word"
 license:             MIT
@@ -45,7 +45,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - longest-adjacent-word
+    - LongestAdjacentWord
 
 tests:
   longest-adjacent-word-test:
@@ -56,4 +56,8 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - longest-adjacent-word
+    - LongestAdjacentWord
+    - hspec
+    - hspec-contrib
+    - QuickCheck
+    - HUnit
