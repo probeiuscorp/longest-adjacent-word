@@ -46,7 +46,6 @@ adjacentPairs =
     , ('i', 'k')
     , ('o', 'k')
     , ('o', 'l')
-    , ('o', 'p')
     , ('l', 'p')
     -- Second-to-third
     , ('a', 'z')
