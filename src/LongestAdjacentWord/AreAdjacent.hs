@@ -11,4 +11,7 @@ adjacent :: [Set.Set Char]
 adjacent = map (\(a, b) -> Set.fromList [a,b]) adjacentPairs
 
 areAdjacent :: Set.Set Char -> Bool
-areAdjacent chars = any (== chars) adjacent
+areAdjacent chars = hasOneElement chars || any (== chars) adjacent
+
+hasOneElement :: Set.Set a -> Bool
+hasOneElement set = Set.size set == 1
