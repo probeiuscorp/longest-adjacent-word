@@ -1,0 +1,59 @@
+name:                longest-adjacent-word
+version:             0.1.0.0
+github:              "probeiuscorp/longest-adjacent-word"
+license:             MIT
+author:              "Caleb Stimpson"
+maintainer:          "caleb.stimpson@gmail.com"
+copyright:           "2024 Caleb Stimpson"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Find longest English word whose letters are adjacent on a QWERTY keyboard
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  longest-adjacent-word-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - longest-adjacent-word
+
+tests:
+  longest-adjacent-word-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - longest-adjacent-word
