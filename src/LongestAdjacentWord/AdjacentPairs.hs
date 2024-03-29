@@ -26,8 +26,8 @@ adjacentPairs =
     , ('c', 'x')
     , ('c', 'v')
     , ('b', 'v')
-    , ('b', 'b')
-    , ('m', 'b')
+    , ('b', 'n')
+    , ('m', 'n')
     -- First-to-second
     , ('q', 'a')
     , ('q', 's')
